@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sosiologinen kyselylomake</title>
+<!--Bootstrap linkki.-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!--CSS linkki.-->
+<link href="Näyttö.css" rel="stylesheet">
+</head>
+<body>
+    <!--Logo ja kuva apinasta.-->
+    <img src="logov23.jpeg" alt="logo" height="100">
+    <img src="apina.jpg" alt="apina" height="300" width="1800">
+
+<!--Navigointipalkki missä pääsee sivulta toiselle.-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<div class="container-fluid">
+    <a class="navbar-brand">Sivujen valinta</a>
+    <a href="Näytönetusivu.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Etusivu</a>
+    <a href="Tietoja-instituutista.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Tietoja-instituutista</a>
+    <a href="Tietojatutkimuksesta.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Tietoja tutkimuksesta</a>
+    <a href="Henkilötietojenkäsittely.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Henkilötietojen käsittely</a>
+</div>
+</nav>
+<!--Tallennetaan lähetetty tieto.-->
+<form action="Näyttö.php" method="post">
+<!--Div on Css:ssä määritelty laittamaan kaikki elementit keskelle.-->
+<!--<h1> on otsikko, <h2> isoa tekstiä. <p> on tavallista tekstiä. <br> tekee uuden rivin.-->
+<div id="keskelle">
+    <h1>Sosiologinen kyselylomake</h1><br><br><br><br><br>
+    <h2>1. Teknologia ja yhteiskunta:</h2><br>
+<p>Kuinka paljon aikaa vietät keskimäärin päivittäin ruudun ääressä (puhelin, tietokone, televisio jne.)?</p>
+    <!--Input type radio mahdollistaa vain yhden valinnan, eli et siis voi valita 'alle 1 tunti' ja 'yli 5 tuntia' samaan aikaan.-->
+    <!--Required tarkoittaa että jokin vaihtoehto on pakko valita/kirjoittaa. Checkboxissa tuo ei valitettavasti toimi niin että pitää valita ainakin yksi.-->
+    <!--Jotta radio ei vahingossa anna valita useita vaihtoehtoja, pitää nimet (name) olla eri..-->
+    <input type="radio" id="1" name="aikaa" value="3" required>
+    <label for="1">Alle 1 tunti</label><br>
+    <input type="radio" id="4" name="aikaa" value="6" required>
+    <label for="4">1-3 tuntia</label><br>
+    <input type="radio" id="7" name="aikaa" value="9" required>
+    <label for="7">3-5 tuntia</label><br>
+    <input type="radio" id="10" name="aikaa" value="12" required>
+    <label for="10">Yli 5 tuntia</label><br>
+<br>
+    <!--Checkbox valinnoissa taas voi valita niin paljon kun haluaa.-->
+<p>Mitkä seuraavista teknologioista koet olevan tärkeä osa elämääsi? (Voit valita useamman)</p>
+    <input type="checkbox" id="13" name="14" value="15">
+    <label for="13">Sosiaalinen media</label><br>   
+    <input type="checkbox" id="16" name="17" value="18">
+    <label for="16">Videopelit</label><br>
+    <input type="checkbox" id="19" name="20" value="21">
+    <label for="19">Verkko-oppiminen</label><br>
+    <input type="checkbox" id="22" name="23" value="24">
+    <label for="22">Uutiset ja tiedonhaku</label><br>
+    <input type="checkbox" id="25" name="26" value="27">
+    <label for="25">Viihdesovellukset (esim. YouTube, Netflix)</label><br>
+<br>
+    <!--Textareaan voi vapaasti kirjoittaa mitä haluaa.-->
+    <p>Miten uskot teknologian muuttavan työelämää seuraavan 10 vuoden aikana?</p>
+    <textarea name="28" id="29" required> </textarea><br>
+<br>
+<h2>2. Työn ja koulutuksen tulevaisuus:</h2><br>
+<p>Miten suhtaudut tulevaisuuden työelämään?</p>
+    <input type="radio" id="30" name="aikaa2" value="32" required>
+    <label for="30">Erittäin positiivisesti</label><br>
+    <input type="radio" id="33" name="aikaa2" value="35" required>
+    <label for="33">Positiivisesti</label><br>
+    <input type="radio" id="36" name="aikaa2" value="38" required>
+    <label for="36">Neutraalisti</label><br>
+    <input type="radio" id="39" name="aikaa2" value="41" required>
+    <label for="39">Negatiivisesti</label><br>
+    <input type="radio" id="42" name="aikaa2" value="44" required>
+    <label for="42">Erittäin negatiivisesti</label><br>
+    <br>
+<p>Mitkä tekijät ovat sinulle tärkeitä tulevaisuuden työpaikassa? (Voit valita useamman)</p>
+    <input type="checkbox" id="45" name="46" value="47">
+    <label for="45">Palkkaus</label><br>
+    <input type="checkbox" id="48" name="49" value="50">
+    <label for="48">Työilmapiiri</label><br>
+    <input type="checkbox" id="51" name="52" value="53">
+    <label for="51">Etätyömahdollisuus</label><br>
+    <input type="checkbox" id="52" name="53" value="54">
+    <label for="52">Työn joustavuus</label><br>
+    <input type="checkbox" id="53" name="54" value="55">
+    <label for="53">Urapolku ja etenemismahdollisuudet</label><br>
+<br>
+<p>Millaisena näet ammatillisen koulutuksen merkityksen omalla urapolullasi?</p>
+    <textarea name="54" id="55" required> </textarea><br>
+<br>
+    <h2>3. Ympäristö ja kestävä kehitys:</h2><br>
+<p>Kuinka tärkeänä pidät ilmastonmuutosta ja kestävää kehitystä omassa elämässäsi?</p>
+    <input type="radio" id="56" name="aikaa3" value="58" required>
+    <label for="56">Erittäin tärkeänä</label><br>
+    <input type="radio" id="59" name="aikaa3" value="61" required>
+    <label for="59">Tärkeänä</label><br>
+    <input type="radio" id="62" name="aikaa3" value="64" required>
+    <label for="62">Neutraalina</label><br>
+    <input type="radio" id="65" name="aikaa3" value="67" required>
+    <label for="65">Ei kovin tärkeänä</label><br>
+    <input type="radio" id="68" name="aikaa3" value="70" required>
+    <label for="68">Ei lainkaan tärkeänä</label><br><br>
+<p>Mitä kestävän kehityksen toimenpiteitä olet valmis tekemään arjessasi? (Voit valita useamman)</p>
+    <input type="checkbox" id="71" name="72" value="73">
+    <label for="71">Kierrätys</label><br>
+    <input type="checkbox" id="74" name="75" value="76">
+    <label for="74">Julkisen liikenteen käyttö</label><br>
+    <input type="checkbox" id="77" name="78" value="79">
+    <label for="77">Sähkön kulutuksen vähentäminen</label><br>
+    <input type="checkbox" id="80" name="81" value="82">
+    <label for="80">Kasvisruokavalion suosiminen</label><br>
+    <input type="checkbox" id="83" name="84" value="85">
+    <label for="83">Tavaroiden korjaaminen ja uudelleenkäyttö</label><br>
+<br>
+<p>Mitä ajattelet yritysten roolista ympäristövastuullisuuden edistämisessä?</p>
+    <textarea name="84" id="85" required> </textarea><br>
+    <br>
+<h2>4. Sosiaalinen oikeudenmukaisuus:</h2><br>
+<p>Kuinka tärkeänä pidät tasa-arvon edistämistä yhteiskunnassa?</p>
+    <input type="radio" id="86" name="aikaa4" value="88" required>
+    <label for="86">Erittäin tärkeänä</label><br>
+    <input type="radio" id="89" name="aikaa4" value="91" required>
+    <label for="89">Tärkeänä</label><br>
+    <input type="radio" id="92" name="aikaa4" value="94" required>
+    <label for="92">Neutraalina</label><br>
+    <input type="radio" id="95" name="aikaa4" value="97" required>
+    <label for="95">Ei kovin tärkeänä</label><br>
+    <input type="radio" id="98" name="aikaa4" value="100" required>
+    <label for="98">Ei lainkaan tärkeänä</label><br>
+    <br>
+<p>Missä yhteiskunnan osa-alueissa koet, että tasa-arvon edistäminen on tärkeintä? (Voit valita useamman)</p>
+    <input type="checkbox" id="101" name="102" value="103">
+    <label for="101">Sukupuolten tasa-arvo</label><br>
+    <input type="checkbox" id="104" name="105" value="106">
+    <label for="104">Tuloerot ja taloudellinen tasa-arvo</label><br>
+    <input type="checkbox" id="107" name="108" value="109">
+    <label for="107">Koulutuksellinen tasa-arvo</label><br>
+    <input type="checkbox" id="110" name="111" value="112">
+    <label for="110">Etninen tasa-arvo</label><br>
+    <input type="checkbox" id="113" name="114" value="115">
+    <label for="113">Esteettömyys ja vammaisten oikeudet</label><br>
+    <br>
+<p>Mitä voitaisiin tehdä, jotta tasa-arvo toteutuisi paremmin omassa yhteisössäsi?</p>
+    <textarea name="116" id="117" required> </textarea><br>
+<br>
+    <!--Tämä nappi lähettää kaikki tiedot.-->
+    <button id="118" type="submit" name="119">Lähetä tiedot</button>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ <!--Alatunniste kertoo tutkimuskeskuksesta.-->
+<footer>
+    <h1>Riihimäen sosiologinen tutkimuskeskus</h1><br><br><br><br><br>
+    <p>Osoite: Sosiologinkatu 5, 11100 Riihimäki, Suomi</p><br>
+    <p>Puhelinnumero: +358 19 123 4567</p><br>
+    <p>Sähköposti: <a href="info@sosiologinentutkimus.fi">info@sosiologinentutkimus.fi</a></p><br>
+    <p>Verkkosivut: <a href="www.sosiologinentutkimus.fi">www.sosiologinentutkimus.fi</a></p><br>
+    <p>Aukioloajat: Ma-Pe: 9.00–16.00 La-Su: Suljettu</p><br>
+    <p>Toiminnan kuvaus: Riihimäen Sosiologinen Tutkimuskeskus keskittyy suomalaisen yhteiskunnan muutoksiin ja kehitykseen liittyvään sosiologiseen tutkimukseen.<br> Instituutti tekee yhteistyötä oppilaitosten, kuntien ja valtionhallinnon kanssa ja tarjoaa kattavia sosiologisia analyysejä ja raportteja eri alueilta, kuten teknologia, ympäristö, koulutus ja tasa-arvo.</p><br>
+</footer>
+</div>
+</form>
+</body>
+</html>

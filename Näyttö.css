@@ -1,0 +1,9 @@
+body{
+    /* Asetetaan taustaväriksi vihreä. */
+    background-color: #006400;
+    /* Yritin asettaa taustakuvan myös, mutta se vaan korvaa värin eikä mene sen päälle. */
+}
+#keskelle{
+    /* Teksti meneee keskelle. */
+    text-align: center;
+}
